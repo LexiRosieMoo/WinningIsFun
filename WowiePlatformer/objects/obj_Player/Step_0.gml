@@ -95,7 +95,7 @@ if active
 */
 	//Movement
 	nextX = x + clamp(velX + 0.5 * accX, -1*terminal, terminal)
-	nextY = y + clamp(velY + 0.5 * accY, -1*terminal, terminal)
+	nextY = y + clamp(velY + 0.5 * accY, -5*terminal, terminal)
 
 
 	lastX = x
@@ -124,15 +124,27 @@ if active
 	accY = 0
 	//show_debug_message(velX)
 	
-	if moving and onGround and (obj_animator.sprite_index != spr_jumpStart)
+	if moving and onGround
 	{
 		obj_animator.sprite_index = obj_animator.run	
 	}
-	else if not onGround
+	else if not onGround and onWall and !place_free(x+2, y) and cont_right
 	{
-		
+		obj_animator.sprite_index = spr_wallGrab
 	}
-	else if (obj_animator.sprite_index != spr_jumpStart)
+	else if not onGround and onWall and !place_free(x-2, y) and cont_left
+	{
+		obj_animator.sprite_index = spr_wallGrab
+	}
+	else if (not onGround and velY > 0)
+	{
+		obj_animator.sprite_index = spr_fall
+	}
+	else if not onGround and velY < 0
+	{
+		obj_animator.sprite_index = spr_jumpStart
+	}
+	else if (obj_animator.sprite_index != spr_jumpStart) and obj_animator.sprite_index != spr_idleYawn and obj_animator.sprite_index != spr_idleBlink
 	{
 		obj_animator.sprite_index = obj_animator.idle	
 	}

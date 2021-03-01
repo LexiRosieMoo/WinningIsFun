@@ -4,6 +4,6 @@ idle = spr_idle
 yawn = spr_idleYawn
 run = spr_run
 jumpStart = spr_jumpStart
-jumpEnd = 0
-
-animation = idle
+fall = spr_fall
+wallGrab = spr_wallGrab
+idleCooldown = 0

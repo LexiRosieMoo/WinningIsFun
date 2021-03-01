@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cb0764e6-6acc-4e8a-8b56-0cf3ffb22afe","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "backgroundElements",
+    "path": "folders/Sprites/backgroundElements.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_painted_sky",
