@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-active = true	
+//active = true	
 onGround = !place_free(x, y+1)
 onWall = !place_free(x+1, y) or !place_free(x-1, y)
 

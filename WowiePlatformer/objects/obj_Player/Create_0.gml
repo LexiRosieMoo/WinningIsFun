@@ -19,7 +19,8 @@ accY = 0
 lastX = x
 lastY = y
 image_speed = 0
-active = false
+active = true
+shots = 0
 
 //Stuff
 

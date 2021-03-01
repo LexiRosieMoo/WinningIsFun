@@ -8,4 +8,6 @@ if instance_number(obj_dead) == 0
 	obj_animator.visible = false
 	audio_pause_all()
 	audio_play_sound(snd_death, 0, false)
+	alarm[0] = 120
+	other.active = false
 }
