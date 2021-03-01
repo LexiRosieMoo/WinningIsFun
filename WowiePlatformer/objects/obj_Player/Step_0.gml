@@ -19,14 +19,28 @@ if active
 	if cont_left
 	{
 		moving = true
-		func_applyForce(-1*spd, 0)
+		if onGround
+		{
+			func_applyForce(-1*spd, 0)
+		}
+		else
+		{
+			func_applyForce(-0.5*spd, 0)
+		}
 		obj_animator.image_xscale = -1
 		
 	}
 	if cont_right
 	{
 		moving = true
-		func_applyForce(spd, 0)	
+		if onGround
+		{
+			func_applyForce(spd, 0)	
+		}
+		else
+		{
+			func_applyForce(0.5*spd, 0)		
+		}
 		obj_animator.image_xscale = 1
 	}
 	if cont_jump

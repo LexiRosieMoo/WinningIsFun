@@ -14,7 +14,7 @@ else
 
 if sprite_index = spr_idle and image_index < 2 and irandom(60) < 2 and idleCooldown < 1
 {
-	if irandom(3) == 2
+	if irandom(1)
 	{
 		sprite_index = spr_idleYawn	
 	}

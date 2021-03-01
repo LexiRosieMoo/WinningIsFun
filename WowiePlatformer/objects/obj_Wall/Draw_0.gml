@@ -3,26 +3,7 @@
 
 
 
-if place_free(x, y-2)
-{
-	sprite_index = spr_ground
-}
 
-if !place_free(x-64, y-64) and !place_free(x-2, y)
-{
-	sprite_index = spr_pf_plain_l_blend
-}
-
-if !place_free(x+64, y-64) and !place_free(x+2, y)
-{
-	sprite_index = spr_pf_plain_r_blend
-}
-
-
-if !place_free(x, y-2)
-{
-	sprite_index = spr_solid
-}
 
 
 if place_free(x-1, y)
